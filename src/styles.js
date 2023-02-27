@@ -11,29 +11,35 @@ const styles = StyleSheet.create({
     color: '#fff',
     marginTop: 10,
   },
-  containerItem: {
+  items: {
     backgroundColor: '#121212',
-    paddingTop: 10,
+    padding: 10,
     flexDirection: 'row',
     justifyContent: 'space-around',
   },
-  containerNames: {
+  header: {
     marginLeft: 10,
     width: 80,
-  },
-  coinName: {
-    flexDirection: 'row',
   },
   text: {
     color: '#fff',
   },
-  textPrice: {
-    color: '#fff',
-    fontWeight: 'bold',
-  },
   image: {
-    width: 30,
-    height: 30,
+    width: 25,
+    height: 25,
+  },
+  textHeader:{
+      fontSize:11
+  },
+  heading: {
+    paddingLeft:50,
+    width: 90,
+  },
+  headerItems: {
+    backgroundColor: '#121212',
+    padding: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
   },
 });
 

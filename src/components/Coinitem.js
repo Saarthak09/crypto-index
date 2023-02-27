@@ -1,24 +1,27 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
-import styles from '../styles'
+import styles from '../styles';
 
 const CoinItem = ({coin}) => (
-  <View style={styles.containerItem}>
-    <View style={styles.coinName}>
+  <View style={styles.items}>
+    <View>
       <Image source={{uri: coin.image}} style={styles.image} />
-      <View style={styles.containerNames}>
+    </View>
+    <View style={styles.header}>
+      <Text>
         <Text style={styles.text}>{coin.name}</Text>
-      </View>
+      </Text>
     </View>
-    <View style={styles.containerNames}>
-      <Text style={styles.textPrice}>₹{coin.current_price}</Text>
+    <View style={styles.header}>
+      <Text style={styles.text}>₹{coin.current_price}</Text>
     </View>
-    <View style={styles.containerNames}>
-      <Text>{coin.price_change_percentage_24h.toFixed(2)}%</Text>
+    <View style={styles.header}>
+      <Text style={styles.text}>{coin.price_change_24h.toFixed(2)}</Text>
     </View>
-    <Text>{coin.price_change_24h.toFixed(2)}</Text>
+    <Text style={styles.text}>
+      {coin.price_change_percentage_24h.toFixed(2)}%
+    </Text>
   </View>
 );
-
 
 export default CoinItem;

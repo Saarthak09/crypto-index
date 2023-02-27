@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, FlatList} from 'react-native';
-import styles from './src/styles'
+import styles from './src/styles';
 import CoinItem from './src/components/Coinitem';
+import Header from './src/components/Header';
+
 
 export type Coin = {
   name: string;
@@ -26,7 +28,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>crypto</Text>
+      <Header></Header>
       <FlatList
         data={coins}
         showsVerticalScrollIndicator={false}

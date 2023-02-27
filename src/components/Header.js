@@ -4,7 +4,6 @@ import styles from '../styles';
 const Header = () => {
   return (
     <View>
-      <Text style={styles.title}>Crypto Index</Text>
       <View style={styles.headerItems}>
         <View style={styles.heading}>
           <Text>
